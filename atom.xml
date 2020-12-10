@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CtrlCV博客</title>
+  <icon>https://www.hack-er.cn/icon.png</icon>
+  <subtitle>一顿CV猛如虎</subtitle>
+  <link href="https://www.hack-er.cn/atom.xml" rel="self"/>
+  
+  <link href="https://www.hack-er.cn/"/>
+  <updated>2020-09-18T22:45:21.906Z</updated>
+  <id>https://www.hack-er.cn/</id>
+  
+  <author>
+    <name>小新哟</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>腾讯云自媒体分享计划</title>
+    <link href="https://www.hack-er.cn/uncategorized/tencent_cloud_we_media_share_plan/"/>
+    <id>https://www.hack-er.cn/uncategorized/tencent_cloud_we_media_share_plan/</id>
+    <published>2022-01-01T14:18:37.000Z</published>
+    <updated>2020-09-18T22:45:21.906Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;奖励  &lt;ol&gt;
+&lt;li&gt;各大技术社区及平台百万级流量推广&lt;/li&gt;
+&lt;li&gt;价值 30 / 100 / 180</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】复杂链表的复制</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/35.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/35.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/</id>
+    <published>2020-09-14T08:35:04.000Z</published>
+    <updated>2020-09-16T23:12:45.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="链表" scheme="https://www.hack-er.cn/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】二叉树中和为某一值的路径</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/34.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/34.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/</id>
+    <published>2020-09-09T08:34:04.000Z</published>
+    <updated>2020-09-16T23:12:37.959Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】二叉搜索树的后序遍历序列</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/33.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/33.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/</id>
+    <published>2020-09-05T08:33:04.000Z</published>
+    <updated>2020-09-16T23:12:29.430Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历结果。如果是则返回 true，否则返回</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+    <category term="后序遍历" scheme="https://www.hack-er.cn/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】Ⅲ. 从上到下打印二叉树</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/32%20-%20III.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20III/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/32%20-%20III.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20III/</id>
+    <published>2020-09-03T08:32:06.000Z</published>
+    <updated>2020-09-16T23:12:19.918Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】Ⅱ. 从上到下打印二叉树</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/32%20-%20II.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20II/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/32%20-%20II.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20II/</id>
+    <published>2020-09-01T08:32:04.000Z</published>
+    <updated>2020-09-16T23:10:11.563Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。&lt;/p&gt;
+&lt;p&gt;例如:&lt;br&gt;给定二叉树:</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】I. 从上到下打印二叉树</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/32%20-%20I.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/32%20-%20I.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+    <published>2020-08-31T08:32:03.000Z</published>
+    <updated>2020-09-16T23:10:00.793Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。&lt;/p&gt;
+&lt;p&gt;例如:&lt;br&gt;给定二叉树:</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】栈的压入、弹出序列</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/31.%20%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/31.%20%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/</id>
+    <published>2020-08-28T08:31:03.000Z</published>
+    <updated>2020-09-16T23:09:54.890Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="栈" scheme="https://www.hack-er.cn/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】包含min函数的栈</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/30.%20%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/30.%20%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</id>
+    <published>2020-08-26T08:30:03.000Z</published>
+    <updated>2020-09-16T23:09:22.067Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="栈" scheme="https://www.hack-er.cn/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】顺时针打印矩阵</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/29.%20%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/29.%20%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/</id>
+    <published>2020-08-21T08:29:03.000Z</published>
+    <updated>2020-09-16T23:09:11.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。&lt;/p&gt;
+&lt;p&gt;示例 1：&lt;/p&gt;
+&lt;p&gt;输入：matrix =</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="矩阵" scheme="https://www.hack-er.cn/tags/%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】对称的二叉树</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/28.%20%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/28.%20%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+    <published>2020-08-17T08:28:03.000Z</published>
+    <updated>2020-09-16T23:09:04.969Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。&lt;/p&gt;
+&lt;p&gt;例如，二叉树</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】二叉树的镜像</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/27.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/27.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/</id>
+    <published>2020-08-16T08:27:03.000Z</published>
+    <updated>2020-09-16T23:08:56.429Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;请完成一个函数，输入一个二叉树，该函数输出它的镜像。&lt;/p&gt;
+&lt;p&gt;例如输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    4
+   /  \
+</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="二叉树" scheme="https://www.hack-er.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】树的子结构</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/26.%20%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/26.%20%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/</id>
+    <published>2020-08-12T08:26:03.000Z</published>
+    <updated>2020-09-16T23:08:50.227Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)&lt;/p&gt;
+&lt;p&gt;B是A的子结构， 即</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="树" scheme="https://www.hack-er.cn/tags/%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】合并两个排序的链表</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/25.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/25.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/</id>
+    <published>2020-08-09T08:25:03.000Z</published>
+    <updated>2020-09-16T23:08:40.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="链表" scheme="https://www.hack-er.cn/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】调整数组顺序使奇数位于偶数前面</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/24.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/24.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
+    <published>2020-08-06T08:24:03.000Z</published>
+    <updated>2020-09-16T23:06:30.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;p&gt;定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。&lt;/p&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;p&gt;输入:</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="反转链表" scheme="https://www.hack-er.cn/tags/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】链表中倒数第 k 个节点</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/22.%20%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%AC%20k%20%E4%B8%AA%E8%8A%82%E7%82%B9/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/22.%20%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%AC%20k%20%E4%B8%AA%E8%8A%82%E7%82%B9/</id>
+    <published>2020-08-05T08:22:03.000Z</published>
+    <updated>2020-09-16T23:06:07.872Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="链表" scheme="https://www.hack-er.cn/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】调整数组顺序使奇数位于偶数前面</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/21.%20%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/21.%20%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</id>
+    <published>2020-08-03T08:21:03.000Z</published>
+    <updated>2020-09-16T23:05:02.266Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数组" scheme="https://www.hack-er.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一页纸单页源码</title>
+    <link href="https://www.hack-er.cn/resources/source-code/one_page_single_page/"/>
+    <id>https://www.hack-er.cn/resources/source-code/one_page_single_page/</id>
+    <published>2020-08-02T23:38:05.000Z</published>
+    <updated>2020-10-04T11:57:27.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;查询多Q共同群&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/10/04/0Gj1xJ.png&quot; alt=&quot;1&quot;&gt;&lt;/li&gt;
+&lt;li&gt;修改QQ在线机型&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="资源" scheme="https://www.hack-er.cn/categories/resources/"/>
+    
+    <category term="源码" scheme="https://www.hack-er.cn/categories/resources/source-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是http</title>
+    <link href="https://www.hack-er.cn/note/other/what_is_http/"/>
+    <id>https://www.hack-er.cn/note/other/what_is_http/</id>
+    <published>2020-07-28T02:29:21.000Z</published>
+    <updated>2020-10-02T01:15:08.608Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;http是一个简单的请求-响应协议,它通常运行在TCP之上.它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应.请求和响应消息的头以ASCII码形式给出;而消息内容则具有一个类似MIME的格式.这个简单模型是早期Web成功的有功之臣,因</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.hack-er.cn/categories/note/"/>
+    
+    <category term="其他" scheme="https://www.hack-er.cn/categories/note/other/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一页纸API网站源码</title>
+    <link href="https://www.hack-er.cn/resources/source-code/one_page_api_website/"/>
+    <id>https://www.hack-er.cn/resources/source-code/one_page_api_website/</id>
+    <published>2020-07-25T14:13:18.000Z</published>
+    <updated>2020-08-29T14:26:34.355Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;一款稳定,快速,免费的API网站.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot; title=&quot;效果&quot;&gt;&lt;/a&gt;效果&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;主页&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="资源" scheme="https://www.hack-er.cn/categories/resources/"/>
+    
+    <category term="源码" scheme="https://www.hack-er.cn/categories/resources/source-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【剑指Offer】表示数值的字符串</title>
+    <link href="https://www.hack-er.cn/%E7%AE%97%E6%B3%95/20.%20%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>https://www.hack-er.cn/%E7%AE%97%E6%B3%95/20.%20%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2020-07-21T08:20:03.000Z</published>
+    <updated>2020-09-16T23:02:00.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://www.hack-er.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="剑指Offer" scheme="https://www.hack-er.cn/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="算法" scheme="https://www.hack-er.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="字符串" scheme="https://www.hack-er.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP变量传递值的方法</title>
+    <link href="https://www.hack-er.cn/note/programming/php_variable_pass_way/"/>
+    <id>https://www.hack-er.cn/note/programming/php_variable_pass_way/</id>
+    <published>2020-07-06T23:32:18.000Z</published>
+    <updated>2020-08-08T08:27:21.595Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;变量的传值方式,是指一个变量传给另一个变量的内部细节形式——单对单.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;值传递&quot;&gt;&lt;a href=&quot;#值传递&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.hack-er.cn/categories/note/"/>
+    
+    <category term="编程" scheme="https://www.hack-er.cn/categories/note/programming/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>QQ二维码登录API源码</title>
+    <link href="https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/"/>
+    <id>https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/</id>
+    <published>2020-07-05T12:01:37.000Z</published>
+    <updated>2020-10-24T14:41:30.602Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="资源" scheme="https://www.hack-er.cn/categories/resources/"/>
+    
+    <category term="源码" scheme="https://www.hack-er.cn/categories/resources/source-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>3种方法加密Python文件</title>
+    <link href="https://www.hack-er.cn/note/programming/three_way_encrypt_python_file/"/>
+    <id>https://www.hack-er.cn/note/programming/three_way_encrypt_python_file/</id>
+    <published>2020-06-17T13:32:08.000Z</published>
+    <updated>2020-08-08T04:49:44.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;pyc&quot;&gt;&lt;a href=&quot;#pyc&quot; class=&quot;headerlink&quot; title=&quot;pyc&quot;&gt;&lt;/a&gt;pyc&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;一种二进制文件,是由py文件经过编译后,生成的文件,是一种byte</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.hack-er.cn/categories/note/"/>
+    
+    <category term="编程" scheme="https://www.hack-er.cn/categories/note/programming/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PHP循环语句</title>
+    <link href="https://www.hack-er.cn/note/programming/php_loop_statement/"/>
+    <id>https://www.hack-er.cn/note/programming/php_loop_statement/</id>
+    <published>2020-06-07T00:44:26.000Z</published>
+    <updated>2020-08-08T04:48:57.275Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;条件&quot;&gt;&lt;a href=&quot;#条件&quot; class=&quot;headerlink&quot; title=&quot;条件&quot;&gt;&lt;/a&gt;条件&lt;/h2&gt;&lt;h3 id=&quot;while&quot;&gt;&lt;a href=&quot;#while&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.hack-er.cn/categories/note/"/>
+    
+    <category term="编程" scheme="https://www.hack-er.cn/categories/note/programming/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一页纸团队网站源码</title>
+    <link href="https://www.hack-er.cn/resources/source-code/one_page_team_website/"/>
+    <id>https://www.hack-er.cn/resources/source-code/one_page_team_website/</id>
+    <published>2020-05-23T14:14:26.000Z</published>
+    <updated>2020-10-04T11:46:51.900Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;一款简约大气却不失细致的团队网站.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot; title=&quot;效果&quot;&gt;&lt;/a&gt;效果&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;主页&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="资源" scheme="https://www.hack-er.cn/categories/resources/"/>
+    
+    <category term="源码" scheme="https://www.hack-er.cn/categories/resources/source-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一页纸信息探针</title>
+    <link href="https://www.hack-er.cn/resources/source-code/one_page_info_probe/"/>
+    <id>https://www.hack-er.cn/resources/source-code/one_page_info_probe/</id>
+    <published>2020-05-16T11:10:51.000Z</published>
+    <updated>2020-10-24T14:41:47.394Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;网站&quot;&gt;&lt;a href=&quot;#网站&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="资源" scheme="https://www.hack-er.cn/categories/resources/"/>
+    
+    <category term="源码" scheme="https://www.hack-er.cn/categories/resources/source-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="https://www.hack-er.cn/note/sign/markdown_grammar/"/>
+    <id>https://www.hack-er.cn/note/sign/markdown_grammar/</id>
+    <published>2020-05-10T12:21:32.000Z</published>
+    <updated>2020-08-30T03:10:50.505Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;格式  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.hack-er.cn/categories/note/"/>
+    
+    <category term="标记" scheme="https://www.hack-er.cn/categories/note/sign/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.hack-er.cn/uncategorized/hello-world/"/>
+    <id>https://www.hack-er.cn/uncategorized/hello-world/</id>
+    <published>2020-05-10T10:23:18.000Z</published>
+    <updated>2020-08-30T03:06:34.472Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>QQ二维码登录API源码 | CtrlCV博客</title>
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QQ二维码登录API源码">
+<meta property="og:url" content="https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/index.html">
+<meta property="og:site_name" content="CtrlCV博客">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-05T12:01:37.000Z">
+<meta property="article:modified_time" content="2020-10-24T14:41:30.602Z">
+<meta property="article:author" content="小新哟">
+<meta property="article:tag" content="CtrlCV博客,CtrlCVBlog,娱乐博客,网络安全,渗透测试,技术博客,编程技术,一顿CV猛如虎">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+  <!-- 百度自动推送 -->
+  <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+       if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CtrlCV博客" type="application/atom+xml">
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">小新哟</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">一名学生</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 中国 江苏</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xiaoxinyo/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/note/">笔记</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/note/other/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/note/sign/">标记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/note/programming/">编程</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/resources/">资源</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/resources/source-code/">源码</a><span class="category-list-count">5</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87Offer/" rel="tag">剑指Offer</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" rel="tag">反转链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%98%B5/" rel="tag">矩阵</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 13.75px;">二叉树</a> <a href="/tags/%E5%89%91%E6%8C%87Offer/" style="font-size: 14px;">剑指Offer</a> <a href="/tags/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" style="font-size: 13px;">反转链表</a> <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 13px;">后序遍历</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 13px;">字符串</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 13px;">数组</a> <a href="/tags/%E6%A0%88/" style="font-size: 13.25px;">栈</a> <a href="/tags/%E6%A0%91/" style="font-size: 13px;">树</a> <a href="/tags/%E7%9F%A9%E9%98%B5/" style="font-size: 13px;">矩阵</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px;">算法</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 13.5px;">链表</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/uncategorized/tencent_cloud_we_media_share_plan/" class="title">腾讯云自媒体分享计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-01-01T14:18:37.000Z" itemprop="datePublished">2022-01-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/35.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/" class="title">【剑指Offer】复杂链表的复制</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-14T08:35:04.000Z" itemprop="datePublished">2020-09-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/34.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/" class="title">【剑指Offer】二叉树中和为某一值的路径</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-09T08:34:04.000Z" itemprop="datePublished">2020-09-09</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/33.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/" class="title">【剑指Offer】二叉搜索树的后序遍历序列</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-05T08:33:04.000Z" itemprop="datePublished">2020-09-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/32%20-%20III.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20III/" class="title">【剑指Offer】Ⅲ. 从上到下打印二叉树</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-03T08:32:06.000Z" itemprop="datePublished">2020-09-03</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-qq_qr_code_login_api" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      QQ二维码登录API源码
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/resources/source-code/qq_qr_code_login_api/" class="article-date">
+	  <time datetime="2020-07-05T12:01:37.000Z" itemprop="datePublished">2020-07-05</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/resources/">资源</a>►<a class="article-category-link" href="/categories/resources/source-code/">源码</a>
+  </span>
+
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/resources/source-code/qq_qr_code_login_api/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 958(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	error_reporting(0);</span><br><span class="line">	header(&#39;content-type:application&#x2F;json&#39;);</span><br><span class="line">    </span><br><span class="line">	function request_http($url, $type&#x3D;0, $post_data&#x3D;&#39;&#39;, $ua&#x3D;&#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;84.0.4147.105 Safari&#x2F;537.36 Edg&#x2F;84.0.522.58&#39;, $cookie&#x3D;&#39;&#39;, $header&#x3D;array(), $redirect&#x3D;true)&#123;</span><br><span class="line">		&#x2F;&#x2F; 初始化curl</span><br><span class="line">		$curl &#x3D; curl_init();</span><br><span class="line">		&#x2F;&#x2F; 设置网址</span><br><span class="line">		curl_setopt($curl,CURLOPT_URL, $url);</span><br><span class="line">		&#x2F;&#x2F; 设置UA</span><br><span class="line">		if (empty($ua) &#x3D;&#x3D; false) &#123;</span><br><span class="line">			$header[] &#x3D; &#39;User-Agent:&#39;.$ua;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 设置Cookie</span><br><span class="line">		if (empty($cookie) &#x3D;&#x3D; false) &#123;</span><br><span class="line">			$header[] &#x3D; &#39;Cookie:&#39;.$cookie;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 设置请求头</span><br><span class="line">		if (empty($ua) &#x3D;&#x3D; false or empty($cookie) &#x3D;&#x3D; false or empty($header) &#x3D;&#x3D; false) &#123;</span><br><span class="line">			curl_setopt($curl, CURLOPT_HTTPHEADER, $header);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 设置POST数据</span><br><span class="line">		if($type &#x3D;&#x3D; 1)&#123;</span><br><span class="line">		    curl_setopt($curl, CURLOPT_POST, true);</span><br><span class="line">		    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 设置重定向</span><br><span class="line">		if ($redirect &#x3D;&#x3D; false) &#123;</span><br><span class="line">			curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); </span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 过SSL验证证书</span><br><span class="line">		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);</span><br><span class="line">		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);</span><br><span class="line">		&#x2F;&#x2F; 将头部作为数据流输出</span><br><span class="line">		curl_setopt($curl, CURLOPT_HEADER, true);</span><br><span class="line">		&#x2F;&#x2F; 设置以变量形式存储返回数据</span><br><span class="line">		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);</span><br><span class="line">		&#x2F;&#x2F; 请求并存储数据</span><br><span class="line">		$return &#x3D; curl_exec($curl);</span><br><span class="line">		&#x2F;&#x2F; 分割头部和身体</span><br><span class="line">		if (curl_getinfo($curl, CURLINFO_HTTP_CODE) &#x3D;&#x3D; &#39;200&#39;) &#123;</span><br><span class="line">			$return_header_size &#x3D; curl_getinfo($curl, CURLINFO_HEADER_SIZE);</span><br><span class="line">		    $return_header &#x3D; substr($return, 0, $return_header_size);</span><br><span class="line">		    $return_data &#x3D; substr($return, $return_header_size);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 关闭cURL</span><br><span class="line">		curl_close($curl);</span><br><span class="line">		&#x2F;&#x2F; 返回数据</span><br><span class="line">		return [$return_header, $return_data];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	function return_result($state, $info) &#123;</span><br><span class="line">		$result &#x3D; array(</span><br><span class="line">			&#39;state&#39;&#x3D;&gt;$state,</span><br><span class="line">			&#39;info&#39;&#x3D;&gt;$info</span><br><span class="line">		);</span><br><span class="line">		exit(stripslashes(json_encode($result, JSON_UNESCAPED_UNICODE)));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	function get_middle_text($text, $text_left, $text_right) &#123;</span><br><span class="line">		$left &#x3D; strpos($text, $text_left);</span><br><span class="line">		$right &#x3D; strpos($text, $text_right, $left);</span><br><span class="line">		if ($left &lt; 0 or $right &lt; $left) &#123;</span><br><span class="line">			return False;</span><br><span class="line">		&#125;;</span><br><span class="line">		return substr($text, $left + strlen($text_left), $right - $left - strlen($text_left));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	function get_ptqrtoken($qrsig) &#123;</span><br><span class="line">		$len &#x3D; strlen($qrsig);</span><br><span class="line">		$hash &#x3D; 0;</span><br><span class="line">		for ($i &#x3D; 0; $i &lt; $len; $i++) &#123;</span><br><span class="line">		    $hash +&#x3D; (($hash &lt;&lt; 5) &amp; 2147483647) + ord($qrsig[$i]) &amp; 2147483647;</span><br><span class="line">		    $hash &amp;&#x3D; 2147483647;</span><br><span class="line">		&#125;</span><br><span class="line">		return $hash &amp; 2147483647;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	function get_result_data($qrsig)&#123;</span><br><span class="line">		$state_data &#x3D; request_http(&#39;https:&#x2F;&#x2F;ssl.ptlogin2.qq.com&#x2F;ptqrlogin?u1&#x3D;https:&#x2F;&#x2F;qzs.qzone.qq.com&#x2F;qzone&#x2F;v5&#x2F;loginsucc.html?para&#x3D;izone&amp;from&#x3D;iqq&amp;ptqrtoken&#x3D;&#39;.get_ptqrtoken($qrsig).&#39;&amp;ptredirect&#x3D;1&amp;h&#x3D;1&amp;t&#x3D;1&amp;g&#x3D;1&amp;from_ui&#x3D;1&amp;ptlang&#x3D;2052&amp;action&#x3D;0-0-&#39;.time().&#39;&amp;js_ver&#x3D;10233&amp;js_type&#x3D;1&amp;login_sig&#x3D;&#39;.$qrsig.&#39;&amp;pt_uistyle&#x3D;40&amp;aid&#x3D;549000912&amp;daid&#x3D;5&#39;, null, null, null, &#39;qrsig&#x3D;&#39;.$qrsig)[1];</span><br><span class="line">		if (strpos($state_data, &#39;未失效&#39;) &#x3D;&#x3D; true) &#123;</span><br><span class="line">			return &#39;未失效&#39;;</span><br><span class="line">		&#125;</span><br><span class="line">		elseif (strpos($state_data, &#39;认证中&#39;) &#x3D;&#x3D; true) &#123;</span><br><span class="line">			return &#39;认证中&#39;;</span><br><span class="line">		&#125;</span><br><span class="line">		elseif (strpos($state_data, &#39;登录成功&#39;) &#x3D;&#x3D; true) &#123;</span><br><span class="line">			$ptuicb_url &#x3D; get_middle_text($state_data, &quot;&#39;0&#39;,&#39;0&#39;,&#39;&quot;, &quot;&#39;,&#39;1&#39;,&quot;);</span><br><span class="line">			$ptuicb_header &#x3D; request_http($ptuicb_url, null, null, null, null, null, false)[0]; </span><br><span class="line">			$cookie &#x3D; &#39;uin&#x3D;&#39;.get_middle_text($ptuicb_header, &#39;uin&#x3D;&#39;, &#39;;&#39;).&#39;;skey&#x3D;&#39;.get_middle_text($ptuicb_header, &#39;skey&#x3D;&#39;, &#39;;&#39;).&#39;;p_uin&#x3D;&#39;.get_middle_text($ptuicb_header, &#39;p_uin&#x3D;&#39;, &#39;;&#39;).&#39;;p_skey&#x3D;&#39;.get_middle_text($ptuicb_header, &#39;p_skey&#x3D;&#39;, &#39;;&#39;).&#39;;pt4_token&#x3D;&#39;.get_middle_text($ptuicb_header, &#39;pt4_token&#x3D;&#39;, &#39;;&#39;);</span><br><span class="line">			return [&#39;已登录&#39;, $cookie];</span><br><span class="line">		&#125;</span><br><span class="line">		elseif (strpos($state_data, &#39;已失效&#39;) &#x3D;&#x3D; true) &#123;</span><br><span class="line">			return &#39;已失效&#39;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	function get_login_data()&#123;</span><br><span class="line">		$return &#x3D; request_http(&#39;https:&#x2F;&#x2F;ssl.ptlogin2.qq.com&#x2F;ptqrshow?appid&#x3D;549000912&amp;e&#x3D;2&amp;l&#x3D;M&amp;s&#x3D;3&amp;d&#x3D;72&amp;v&#x3D;4&amp;t&#x3D;&#39;.time().&#39;&amp;daid&#x3D;5&amp;pt_3rd_aid&#x3D;0&#39;);</span><br><span class="line">		$qrsig &#x3D; get_middle_text($return[0], &#39;qrsig&#x3D;&#39;, &#39;;&#39;);</span><br><span class="line">		$qr_code &#x3D; &#39;data:image&#x2F;jpeg;base64,&#39;.base64_encode($return[1]);</span><br><span class="line">		return [$qrsig, $qr_code];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	$TYPE &#x3D; $_REQUEST[&#39;type&#39;];</span><br><span class="line">	$QRSIG &#x3D; $_REQUEST[&#39;qrsig&#39;];</span><br><span class="line">	if (empty($TYPE) &#x3D;&#x3D; true or ($TYPE !&#x3D; &#39;get&#39; and empty($QRSIG) &#x3D;&#x3D; true)) &#123;</span><br><span class="line">		return_result(100, &#39;参数错误&#39;);</span><br><span class="line">	&#125;</span><br><span class="line">	elseif ($TYPE &#x3D;&#x3D; &#39;get&#39;) &#123;</span><br><span class="line">		$login_data &#x3D; get_login_data();</span><br><span class="line">		$result &#x3D; array(</span><br><span class="line">			&#39;qrsig&#39;&#x3D;&gt;$login_data[0],</span><br><span class="line">			&#39;qr_code&#39;&#x3D;&gt;$login_data[1]</span><br><span class="line">		);</span><br><span class="line">		return_result(200, $result);</span><br><span class="line">	&#125;</span><br><span class="line">	elseif ($TYPE &#x3D;&#x3D; &#39;result&#39;) &#123;</span><br><span class="line">		$result_data &#x3D; get_result_data($QRSIG);</span><br><span class="line">		if (is_string($result_data) &#x3D;&#x3D; True) &#123;</span><br><span class="line">			$result &#x3D; $result_data;</span><br><span class="line">		&#125;</span><br><span class="line">		else&#123;</span><br><span class="line">			$result &#x3D; array(</span><br><span class="line">				&#39;state&#39;&#x3D;&gt;$result_data[0],</span><br><span class="line">				&#39;cookie&#39;&#x3D;&gt;$result_data[1]</span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line">		return_result(200, $result);</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123;</span><br><span class="line">		return_result(100, &#39;类型错误&#39;);</span><br><span class="line">	&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>是</td>
+<td>get代表登录数据,result代表结果</td>
+</tr>
+<tr>
+<td>qrsig</td>
+<td>否</td>
+<td>存在登录数据中,type为result时必填</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/" title="QQ二维码登录API源码" target="_blank" rel="external">https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">小新哟</span><small class="ml-1x">一名学生</small></a></h3>
+        <div>一顿CV猛如虎</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/note/programming/php_variable_pass_way/" title="PHP变量传递值的方法"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/note/programming/three_way_encrypt_python_file/" title="3种方法加密Python文件"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xiaoxinyo/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+        <a href="https://icp.gov.moe/?keyword=20202066" target="_blank">萌ICP备 20202066号</a>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+
+</body>
+</html>

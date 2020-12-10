@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>一页纸信息探针 | CtrlCV博客</title>
+  <meta name="description" content="网站 一款基于PHP的专业查询个人信息的网站.   首页自定义设置探针页面,探针功能,QQ分享,通知邮箱等. 查询探针查询页面列表显示更加清晰,直观. 后台探针管理页面可对探针进行详情查看和删除. 设置设置网站功能发信相关,代码等.  下载源码(提取码:c66d) API 一款基于PHP的专业查询个人信息的API.  1234567891011121314151617181920212223242">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一页纸信息探针">
+<meta property="og:url" content="https://www.hack-er.cn/resources/source-code/one_page_info_probe/index.html">
+<meta property="og:site_name" content="CtrlCV博客">
+<meta property="og:description" content="网站 一款基于PHP的专业查询个人信息的网站.   首页自定义设置探针页面,探针功能,QQ分享,通知邮箱等. 查询探针查询页面列表显示更加清晰,直观. 后台探针管理页面可对探针进行详情查看和删除. 设置设置网站功能发信相关,代码等.  下载源码(提取码:c66d) API 一款基于PHP的专业查询个人信息的API.  1234567891011121314151617181920212223242">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/02/JxVcvQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/02/JxVHv4.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/13/Qg6RWF.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/13/Qg6hQJ.png">
+<meta property="article:published_time" content="2020-05-16T11:10:51.000Z">
+<meta property="article:modified_time" content="2020-10-24T14:41:47.394Z">
+<meta property="article:author" content="小新哟">
+<meta property="article:tag" content="CtrlCV博客,CtrlCVBlog,娱乐博客,网络安全,渗透测试,技术博客,编程技术,一顿CV猛如虎">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/02/JxVcvQ.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://www.hack-er.cn/resources/source-code/one_page_info_probe/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+  <!-- 百度自动推送 -->
+  <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+       if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CtrlCV博客" type="application/atom+xml">
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">小新哟</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">一名学生</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 中国 江苏</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xiaoxinyo/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/note/">笔记</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/note/other/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/note/sign/">标记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/note/programming/">编程</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/resources/">资源</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/resources/source-code/">源码</a><span class="category-list-count">5</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87Offer/" rel="tag">剑指Offer</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" rel="tag">反转链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%98%B5/" rel="tag">矩阵</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 13.75px;">二叉树</a> <a href="/tags/%E5%89%91%E6%8C%87Offer/" style="font-size: 14px;">剑指Offer</a> <a href="/tags/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" style="font-size: 13px;">反转链表</a> <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 13px;">后序遍历</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 13px;">字符串</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 13px;">数组</a> <a href="/tags/%E6%A0%88/" style="font-size: 13.25px;">栈</a> <a href="/tags/%E6%A0%91/" style="font-size: 13px;">树</a> <a href="/tags/%E7%9F%A9%E9%98%B5/" style="font-size: 13px;">矩阵</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px;">算法</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 13.5px;">链表</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/uncategorized/tencent_cloud_we_media_share_plan/" class="title">腾讯云自媒体分享计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-01-01T14:18:37.000Z" itemprop="datePublished">2022-01-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/35.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/" class="title">【剑指Offer】复杂链表的复制</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-14T08:35:04.000Z" itemprop="datePublished">2020-09-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/34.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/" class="title">【剑指Offer】二叉树中和为某一值的路径</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-09T08:34:04.000Z" itemprop="datePublished">2020-09-09</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/33.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/" class="title">【剑指Offer】二叉搜索树的后序遍历序列</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-05T08:33:04.000Z" itemprop="datePublished">2020-09-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/%E7%AE%97%E6%B3%95/32%20-%20III.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20III/" class="title">【剑指Offer】Ⅲ. 从上到下打印二叉树</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-03T08:32:06.000Z" itemprop="datePublished">2020-09-03</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-one_page_info_probe" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      一页纸信息探针
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/resources/source-code/one_page_info_probe/" class="article-date">
+	  <time datetime="2020-05-16T11:10:51.000Z" itemprop="datePublished">2020-05-16</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/resources/">资源</a>►<a class="article-category-link" href="/categories/resources/source-code/">源码</a>
+  </span>
+
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/resources/source-code/one_page_info_probe/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 583(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><blockquote>
+<p>一款基于PHP的专业查询个人信息的网站.</p>
+</blockquote>
+<ul>
+<li>首页<br><img src="https://s1.ax1x.com/2020/05/02/JxVcvQ.png" alt="1"><br>自定义设置探针页面,探针功能,QQ分享,通知邮箱等.</li>
+<li>查询<br><img src="https://s1.ax1x.com/2020/05/02/JxVHv4.png" alt="2"><br>探针查询页面列表显示更加清晰,直观.</li>
+<li>后台<br><img src="https://s2.ax1x.com/2019/12/13/Qg6RWF.png" alt="3"><br>探针管理页面可对探针进行详情查看和删除.</li>
+<li>设置<br><img src="https://s2.ax1x.com/2019/12/13/Qg6hQJ.png" alt="4"><br>设置网站功能发信相关,代码等.</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1A0b4GJ6JQUF-f_4wE-wybQ">下载源码(提取码:c66d)</a></p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><blockquote>
+<p>一款基于PHP的专业查询个人信息的API.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	error_reporting(0);</span><br><span class="line"></span><br><span class="line">	function get_user_system($ua) &#123;</span><br><span class="line">	    if (strpos($ua, &#39;Windows&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;Windows&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;Macintosh&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;MacOS&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;iPod&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;iPodOS&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;iPad&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;iPadOS&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;iPhone&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;iOS&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;Android&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;Android&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;Unix&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;Unix&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		elseif (strpos($ua, &#39;Linux&#39;)) &#123;</span><br><span class="line">			$system &#x3D; &#39;Linux&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">		else&#123;</span><br><span class="line">			$system &#x3D; &#39;未知&#39;;</span><br><span class="line">	    &#125;</span><br><span class="line">	    return $system;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	function return_result($state, $info) &#123;</span><br><span class="line">		$result &#x3D; array(</span><br><span class="line">			&#39;state&#39;&#x3D;&gt;$state,</span><br><span class="line">			&#39;info&#39;&#x3D;&gt;$info</span><br><span class="line">		);</span><br><span class="line">		exit(json_encode($result, JSON_UNESCAPED_UNICODE));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	$type &#x3D; $_GET[&#39;type&#39;];</span><br><span class="line">	$key &#x3D; $_GET[&#39;key&#39;];</span><br><span class="line">	if (empty($type) &#x3D;&#x3D; true or empty($key) &#x3D;&#x3D; true) &#123;</span><br><span class="line">		return_result(100, &#39;参数错误&#39;);</span><br><span class="line">	&#125;</span><br><span class="line">	$images_url &#x3D; $_GET[&#39;images_url&#39;];</span><br><span class="line">	$ip &#x3D; $_SERVER[&#39;REMOTE_ADDR&#39;];</span><br><span class="line">	$ua &#x3D; $_SERVER[&#39;HTTP_USER_AGENT&#39;];</span><br><span class="line">	if (empty($ua) &#x3D;&#x3D; true) &#123;</span><br><span class="line">		$ua &#x3D; &#39;未知&#39;;</span><br><span class="line">	&#125;</span><br><span class="line">	$data_dir_path &#x3D; &#39;.&#x2F;probe_data&#x2F;&#39;;</span><br><span class="line">	if (is_dir($data_dir_path) &#x3D;&#x3D; false) &#123;</span><br><span class="line">		mkdir($data_dir_path, 0777, true);</span><br><span class="line">	&#125;</span><br><span class="line">	$data_file_path &#x3D; $data_dir_path.$key.&#39;.json&#39;;</span><br><span class="line">	if ($type &#x3D;&#x3D; &#39;generate&#39;) &#123;</span><br><span class="line">		if (file_exists($data_file_path) &#x3D;&#x3D; false) &#123;</span><br><span class="line">			fopen($data_file_path,&quot;w&quot;);</span><br><span class="line">			return_result(200, &#39;生成成功&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">		else&#123;</span><br><span class="line">			return_result(200, &#39;已存在&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	elseif ($type &#x3D;&#x3D; &#39;record&#39;) &#123;</span><br><span class="line">		if (file_exists($data_file_path) &#x3D;&#x3D; true) &#123;</span><br><span class="line">			$data &#x3D; json_decode(file_get_contents($data_file_path), true);</span><br><span class="line">			if (array_key_exists($ip, $data) &#x3D;&#x3D; false) &#123;</span><br><span class="line">				$data[$ip] &#x3D; array(</span><br><span class="line">					&#39;ua&#39;&#x3D;&gt;$ua,</span><br><span class="line">					&#39;system&#39;&#x3D;&gt;get_user_system($ua)</span><br><span class="line">				);</span><br><span class="line">				$data &#x3D; json_encode($data);</span><br><span class="line">				file_put_contents($data_file_path, $data);</span><br><span class="line">			&#125;</span><br><span class="line">			if (empty($images_url) &#x3D;&#x3D; true) &#123;</span><br><span class="line">				header(&#39;location:https:&#x2F;&#x2F;www.baidu.com&#x2F;&#39;);</span><br><span class="line">			&#125;</span><br><span class="line">			else&#123;</span><br><span class="line">				header(&#39;location:&#39;.base64_decode($images_url));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else&#123;</span><br><span class="line">			return_result(200, &#39;不存在&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	elseif ($type &#x3D;&#x3D; &#39;query&#39;) &#123;</span><br><span class="line">		if (file_exists($data_file_path) &#x3D;&#x3D; false) &#123;</span><br><span class="line">			return_result(200, &#39;不存在&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">		else&#123;</span><br><span class="line">			$data &#x3D; json_decode(file_get_contents($data_file_path), true);</span><br><span class="line">			return_result(200, $data);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123;</span><br><span class="line">		return_result(100, &#39;类型错误&#39;);</span><br><span class="line">	&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>是</td>
+<td>generate代表生成,record代表记录,query代表查询</td>
+</tr>
+<tr>
+<td>ket</td>
+<td>是</td>
+<td>密钥</td>
+</tr>
+<tr>
+<td>images_url</td>
+<td>否</td>
+<td>记录后跳转的图片网址</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hack-er.cn/resources/source-code/one_page_info_probe/" title="一页纸信息探针" target="_blank" rel="external">https://www.hack-er.cn/resources/source-code/one_page_info_probe/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">小新哟</span><small class="ml-1x">一名学生</small></a></h3>
+        <div>一顿CV猛如虎</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/resources/source-code/one_page_team_website/" title="一页纸团队网站源码"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/note/sign/markdown_grammar/" title="Markdown语法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xiaoxinyo/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+        <a href="https://icp.gov.moe/?keyword=20202066" target="_blank">萌ICP备 20202066号</a>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+
+</body>
+</html>
