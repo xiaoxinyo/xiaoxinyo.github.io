@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.hack-er.cn/resources/source-code/one_page_team_website/</loc>
+    <loc>https://www.hack-er.cn/resources/source-code/one_page_single_page_source/</loc>
+    
+    <lastmod>2021-01-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.hack-er.cn/resources/source-code/one_page_team_website_source/</loc>
     
     <lastmod>2020-12-19</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.hack-er.cn/resources/source-code/one_page_info_probe/</loc>
+    <loc>https://www.hack-er.cn/resources/source-code/one_page_info_probe_source/</loc>
     
     <lastmod>2020-10-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api/</loc>
+    <loc>https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api_source/</loc>
     
     <lastmod>2020-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.hack-er.cn/resources/source-code/one_page_single_page/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
     
   </url>
   
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://www.hack-er.cn/resources/source-code/one_page_api_website/</loc>
+    <loc>https://www.hack-er.cn/resources/source-code/one_page_api_website_source/</loc>
     
     <lastmod>2020-08-29</lastmod>
     
@@ -109,7 +109,7 @@
 
   <url>
     <loc>https://www.hack-er.cn/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -119,42 +119,42 @@
   
   <url>
     <loc>https://www.hack-er.cn/categories/note/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.hack-er.cn/categories/resources/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.hack-er.cn/categories/note/sign/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.hack-er.cn/categories/note/programming/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.hack-er.cn/categories/resources/source-code/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.hack-er.cn/categories/note/other/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2021-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
