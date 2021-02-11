@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.hack-er.cn/resources/source-code/one_page_team_website_source/</loc>
+    
+    <lastmod>2021-02-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.hack-er.cn/resources/source-code/one_page_api_website_source/</loc>
     
     <lastmod>2021-02-11</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://www.hack-er.cn/resources/source-code/qq_qr_code_login_api_source/</loc>
     
     <lastmod>2021-02-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.hack-er.cn/resources/source-code/one_page_team_website_source/</loc>
-    
-    <lastmod>2021-02-05</lastmod>
     
   </url>
   
@@ -111,13 +111,6 @@
 
   
   <url>
-    <loc>https://www.hack-er.cn/categories/resources/</loc>
-    <lastmod>2021-02-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hack-er.cn/categories/note/</loc>
     <lastmod>2021-02-11</lastmod>
     <changefreq>daily</changefreq>
@@ -125,7 +118,14 @@
   </url>
   
   <url>
-    <loc>https://www.hack-er.cn/categories/resources/source-code/</loc>
+    <loc>https://www.hack-er.cn/categories/resources/</loc>
+    <lastmod>2021-02-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hack-er.cn/categories/note/sign/</loc>
     <lastmod>2021-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -139,7 +139,7 @@
   </url>
   
   <url>
-    <loc>https://www.hack-er.cn/categories/note/sign/</loc>
+    <loc>https://www.hack-er.cn/categories/resources/source-code/</loc>
     <lastmod>2021-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
