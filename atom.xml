@@ -41,11 +41,11 @@
   </entry>
   
   <entry>
-    <title>什么是http</title>
+    <title>什么是HTTP</title>
     <link href="https://www.hack-er.cn/note/other/what_is_http/"/>
     <id>https://www.hack-er.cn/note/other/what_is_http/</id>
     <published>2020-07-28T02:29:21.000Z</published>
-    <updated>2020-10-02T01:15:08.608Z</updated>
+    <updated>2021-04-15T15:17:58.591Z</updated>
     
     
       
@@ -53,7 +53,7 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;http是一个简单的请求-响应协议,它通常运行在TCP之上.它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应.请求和响应消息的头以ASCII码形式给出;而消息内容则具有一个类似MIME的格式.这个简单模型是早期Web成功的有功之臣,因</summary>
+&lt;p&gt;HTTP是一个简单的请求-响应协议,它通常运行在TCP之上.它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应.请求和响应消息的头以ASCII码形式给出;而消息内容则具有一个类似MIME的格式.这个简单模型是早期Web成功的有功之臣,因</summary>
         
       
     
